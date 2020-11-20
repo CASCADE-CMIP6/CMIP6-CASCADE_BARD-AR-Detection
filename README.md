@@ -24,10 +24,10 @@ total of 392 GB of data.
 
 The following scripts were used for the run.
 
-| script name                                   | description                                |
-+-----------------------------------------------+--------------------------------------------+
-| [1_run_planning.sh](1_run_planning.sh)        | Scans the dataset. The output is Used to determine the number of Cori nodes needed for the AR detection run. |
-| [2_CASCADE_BARD_AR_detect.sh](2_CASCADE_BARD_AR_detect.sh)  | Makes the run detecting ARs.               |
+| script name | description |
+| :---- | :---- |
+| [1_run_planning.sh](1_run_planning.sh) | Scans the dataset. The output is Used to determine the number of Cori nodes needed for the AR detection run. |
+| [2_CASCADE_BARD_AR_detect.sh](2_CASCADE_BARD_AR_detect.sh) | Makes the run detecting ARs. |
 | [HighResMIP_ECMWF...6hrPlevPt.mcf](HighResMIP_ECMWF_ECMWF-IFS-HR_highresSST-present_r1i1p1f1_6hrPlevPt.mcf) | MCF configuration file identifying the location of the HighResMIP data |
 
 These can be used as a template for making other similar runs. One will need to
