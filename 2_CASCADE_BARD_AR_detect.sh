@@ -6,20 +6,16 @@
 #SBATCH -A m1517
 #SBATCH -J 2_CASCADE_BARD_AR_detect
 
-# bring a TECA install into your environment. Note this will not work if you
-# have other HDF5, NetCDF or Python modules loaded
-# change the following paths to point to your TECA install
+# load gcc
 module swap PrgEnv-intel PrgEnv-gnu
-module use /global/cscratch1/sd/loring/teca_testing/deps/cf_reader_performance/modulefiles/
-module load teca/cf_reader_performance
+
+# bring a TECA install into your environment.
+module use /global/cscratch1/sd/loring/teca_testing/installs/develop/modulefiles
+module load teca
 
 # print the commands aas the execute, and error out if any one command fails
 set -e
 set -x
-
-# configure HDF5 file locking if on Cori (CFS)community file system
-# This is not needed on Cori Lustre scratch file system
-export HDF5_USE_FILE_LOCKING=FALSE
 
 # make a directory for the output files
 out_dir=HighResMIP_ECMWF_ECMWF-IFS-HR_highresSST-present_r1i1p1f1_6hrPlevPt/CASCADE_BARD_all
